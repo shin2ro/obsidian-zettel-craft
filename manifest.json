@@ -1,11 +1,10 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
+	"id": "obsidian-unique-id-note-creator",
+	"name": "Unique ID Note Creator",
 	"version": "1.0.0",
-	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"minAppVersion": "1.6.7",
+	"description": "Create notes with unique IDs.",
+	"author": "Shinjiro Sakaitani",
+	"authorUrl": "https://github.com/shin2ro",
 	"isDesktopOnly": false
 }
