@@ -12,24 +12,13 @@ export default class UniqueIdNoteCreator extends Plugin {
 	}
 
 	async createNewNote() {
-		const now = Date.now();
-		const id = this.encode(now);
+		const now = window.moment();
+		const id = now.format('YYYYMMDDHHmm');
 		let data = '---\n';
 		data += `id: ${id}\n`;
 		data += 'title: \n';
 		data += '---\n'
 		const file = await this.app.vault.create(`${id}.md`, data);
 		await this.app.workspace.getLeaf('tab').openFile(file);
-	}
-
-	encode(x: number): string {
-		const symbols = '0123456789ABCDEFGHJKMNPQRSTVWXYZ';
-		let encoded = '';
-		for (let i = 0; i < 10; i++) {
-			const mod = x % symbols.length;
-			encoded = symbols[mod] + encoded;
-			x = (x - mod) / symbols.length
-		}
-		return encoded;
 	}
 }
