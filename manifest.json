@@ -1,6 +1,6 @@
 {
-	"id": "obsidian-unique-id-note-creator",
-	"name": "Unique ID Note Creator",
+	"id": "obsidian-zettel-craft",
+	"name": "Zettel Craft",
 	"version": "1.0.0",
 	"minAppVersion": "1.6.7",
 	"description": "Create notes with unique IDs.",

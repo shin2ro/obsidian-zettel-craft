@@ -1,6 +1,6 @@
 import {Plugin} from 'obsidian';
 
-export default class UniqueIdNoteCreator extends Plugin {
+export default class ZettelCraft extends Plugin {
 	async onload() {
 		this.addCommand({
 			id: 'create-new-note',
