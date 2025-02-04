@@ -19,12 +19,10 @@ export default class ZettelCraft extends Plugin {
 		data += 'title: \n';
 		data += '---\n'
 		data += '\n';
-		data += `# ${id} \n`;
 		const file = await this.app.vault.create(`${id}.md`, data);
 		await this.app.workspace.getLeaf('tab').openFile(file);
-		this.app.workspace.activeEditor?.editor?.setSelections([
-			{ anchor: { ch: 7, line: 2}},
-			{ anchor: { ch: 15, line: 5}},
-		]);
+		this.app.workspace.activeEditor?.editor?.setSelection({
+			ch: 7, line: 2
+		});
 	}
 }
